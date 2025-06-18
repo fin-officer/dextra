@@ -1,7 +1,7 @@
 # dextra - Data Extraction package for InvOCR
 # Development and deployment automation
 
-.PHONY: help install test lint format build clean
+.PHONY: help install test lint format build clean publish
 
 # Default target
 help:
@@ -13,6 +13,7 @@ help:
 	@echo "format      - Format code"
 	@echo "build       - Build package"
 	@echo "clean       - Clean build artifacts"
+	@echo "publish     - Publish package to PyPI"
 
 install:
 	poetry install
@@ -38,3 +39,6 @@ clean:
 	rm -rf .pytest_cache/
 	find . -type d -name __pycache__ -delete
 	find . -type f -name "*.pyc" -delete
+
+publish:
+	poetry publish --build

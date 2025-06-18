@@ -13,13 +13,14 @@ packages = [{include = "dextra"}]
 [tool.poetry.dependencies]
 python = "^3.8"
 pydantic = "^2.0.0"
-invutil = {path = "../invutil", develop = true}
-valider = {path = "../valider", develop = true}
 transformers = "^4.0.0"
 regex = "^2023.0.0"
 spacy = "^3.0.0"
 
 [tool.poetry.group.dev.dependencies]
+invutil = {path = "../invutil", develop = true, optional = true}
+valider = {path = "../valider", develop = true, optional = true}
+
 pytest = "^7.0.0"
 pytest-cov = "^4.0.0"
 black = "^23.0.0"
