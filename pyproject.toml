@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "dextra"
-version = "0.1.0"
+version = "0.1.1"
 description = "Data extraction framework for financial documents"
 authors = ["Fin Officer Team"]
 readme = "README.md"
@@ -18,8 +18,9 @@ regex = "^2023.0.0"
 spacy = "^3.0.0"
 
 [tool.poetry.group.dev.dependencies]
-invutil = {path = "../invutil", develop = true, optional = true}
-valider = {path = "../valider", develop = true, optional = true}
+# Local development dependencies (uncomment for local development)
+# invutil = {path = "../invutil", develop = true, optional = true}
+# valider = {path = "../valider", develop = true, optional = true}
 
 pytest = "^7.0.0"
 pytest-cov = "^4.0.0"
